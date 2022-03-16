@@ -20,7 +20,7 @@ namespace PeopleViewer.Presentention.Tests
 
             // Assert
             Assert.IsNotNull(viewModel);
-            Assert.Equals(2, viewModel.People.Count());
+            Assert.AreEqual(2, viewModel.People.Count());
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace PeopleViewer.Presentention.Tests
             viewModel.ClearPeople();
 
             // Assert
-            Assert.Equals(0, viewModel.People.Count());
+            Assert.AreEqual(0, viewModel.People.Count());
         }
     }
 }

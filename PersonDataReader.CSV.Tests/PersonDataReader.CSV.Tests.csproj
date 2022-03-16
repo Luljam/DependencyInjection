@@ -13,8 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PeopleViewer.Common\PeopleViewer.Common.csproj" />
-    <ProjectReference Include="..\PeopleViewer.Presentation\PeopleViewer.Presentation.csproj" />
+    <ProjectReference Include="..\PersonDataReader.CSV\PersonDataReader.CSV.csproj" />
   </ItemGroup>
 
 </Project>
