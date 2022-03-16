@@ -1,5 +1,6 @@
 ﻿using Ninject;
 using PeopleViewer.Common;
+using PersonDataReader.Decorators;
 using PersonDataReader.Service;
 using System.Windows;
 
@@ -19,7 +20,9 @@ namespace PeopleViewer.Ninject
 
         private void ConfigureContainer()
         {
-            Container.Bind<IPersonReader>().To<ServiceReader>();
+            Container.Bind<IPersonReader>().To<CachingReader>()
+                .InSingletonScope()
+                .WithConstructorArgument<IPersonReader>(Container.Get<ServiceReader>());
         }
 
         private void ComposeObjects()
